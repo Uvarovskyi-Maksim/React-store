@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.containerx {
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.sectionProductList {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product2 {
+    box-sizing: border-box;
+    width: 25%;
+    align-items: center;
+    border: 0.5px solid rgba(246, 242, 242, 0.923);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.product2:hover {
+    box-shadow: 0 0 20px rgba(134, 133, 133, 0.5);
+    padding-bottom: 0px;
+    .add_to_cart, .costs_add{
+        display: flex;
+    }
+}
+
+.title2,
+.count2 {
+    margin-top: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title2 {
+    font-size: 16px;
+    font-weight: 800;
+    
+}
+
+.count2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+.counting{
+    color: green;
+    display: flex;
+}
+.img2 {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.raiting_block {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.compatibility {
+    font-size: 14px;
+}
+
+.line {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30%;
+}
+
+.line hr {
+    border: none;
+    /* Убираем стандартное отображение линии hr */
+    border-top: 2px solid rgba(211, 208, 208, 0.5);
+}
+.marker {
+    position: relative;
+    width: 7px; /* Установите желаемый размер точки */
+    height: 7px; /* Установите желаемый размер точки */
+    background-color: green; /* Цвет точки */
+    border-radius: 50%; /* Создаем круглую форму */
+    margin-right:10px ;
+    margin-top: 5px;
+  }
+  .cost{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .add_to_cart{
+    display: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .costs_add{
+    display: none;
+    width: 100%;
+    height: 30px;
+  }
+  .count_products{
+    display: flex;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(235, 238, 240);
+  }
+  .add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    background-color: orange;
+    color: floralwhite;
+    text-align: center;
+    transition: all 300ms ease; 
+  }
+  .add:hover{
+    background-color: #ffb400;
+  }
+  .plus{
+    border: 0;
+    background-color: rgb(170, 173, 176);
+    cursor: pointer;
+  }
+  .count_products h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }

@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.containerSlide{
+    height: 200px;
+}
+
+.slider-container {
+    position: relative;
+    
+    overflow: hidden;
+    
+  }
+  .slide_img{
+    margin-left: 50%;
+  }
+  .prev-button,
+  .next-button {
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-50%);
+    z-index: 1; /* Устанавливаем z-index, чтобы кнопки были поверх слайдера */
+    color: black;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #edad0b;
+  }
+  
+  .prev-button {
+    left: 10px; /* Позиция кнопки "Previous" слева от слайдера */
+  }
+  
+  .next-button {
+    right: 10px; /* Позиция кнопки "Next" справа от слайдера */
+  }
+  .slider-container:hover .prev-button,
+  .slider-container:hover .next-button {
+    opacity: 1; /* Устанавливаем конечное значение прозрачности */
+    transform: translateX(0); /* Устанавливаем конечное значение transform */
+  }

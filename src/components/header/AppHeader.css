@@ -1,0 +1,150 @@
+*{
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.header_line{
+    border-bottom: 1px solid #989895;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation{
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.navigation li {
+    margin-right: 40px; /* Расстояние между элементами */
+  }
+  .navigation li a{
+    color: black;
+  }
+  .navigation li a:hover{
+    color: #ffcc80;
+  }
+  .header_whatsapp_link{
+    display: flex;
+    align-items:center;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  .header_whatsapp_link span a{
+    color: #f4a835;
+  }
+  .whatsapp_img{
+    width: 25px;
+    height: 25px;
+  }
+  .header_phone{
+    display: flex;
+    align-items:center;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  .header_phone span a{
+    color: black;
+  }
+  .phone_number{
+    font-weight: 800;
+  }
+  .log_in{
+    display: flex;
+    align-items:center;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  .log_in span a{
+    color: black;
+  }
+  .mid_line{
+    display: flex;
+    height: 65px;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+
+  .catalog_button{
+    display: flex;
+    margin-left: 40px;
+    align-items:center;
+    font-size: 16px;
+    background-color:#ffcc80;
+    font-size: large;
+    color: #fff;
+  }
+  .catalog_elem{
+    padding: 0px 40px 0px 40px;
+  }
+  .catalog_txt{
+    margin-left: 25px;
+  }
+  
+  .catalog_button:hover{
+    background-color: #ffb400;
+  }
+.d1, .like_basket{
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+.search_form {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.d1 input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+.d1 button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.d1 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+.js-basket-block{
+  margin-left: 30px;
+}
+.count_block{
+  background-color: coral;
+  border-radius: 15px;
+}
+.count{
+  margin: 5px 5px 5px 5px;
+}
+.js-basket-block{
+  cursor: pointer;
+}

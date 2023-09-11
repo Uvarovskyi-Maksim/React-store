@@ -1,0 +1,44 @@
+.content_wrapper_block{
+    display: flex;
+    height: 200px;
+    margin-top: 50px;
+    border: 2px solid rgb(247, 247, 244);
+}
+.wrapper_block{
+    width: 20%;
+    
+}
+.wrapper_img_block{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    height: 50px;
+}
+.wrapper_txt_block{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+.paragraph{
+    line-height: 30px;
+    color: #555555;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.spisok {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.spisok li:before {
+    content:  "—";
+    position: relative;
+    left:     -25px;
+}
+.spisok li{
+    color: #555555;
+    font-size: 17px;
+    margin-top: 10px;
+}

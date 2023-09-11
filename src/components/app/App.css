@@ -1,3 +1,6 @@
+*{
+  font-family: 'Montserrat', sans-serif;;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +39,39 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.all_catalogy{
+  display: flex;
+  margin: 0 auto;
+  background-color: #ffb400;
+  border: 0;
+  margin-top: 30px;
+  cursor: pointer;
+
+}
+.all_catalogy span{
+  padding: 18px 40px 18px 40px;
+  font-size: 16px;
+  color: floralwhite;
+  border-radius: 7px;
+}
+
+.all_catalogy:hover{
+  box-shadow: 1px 1px 25px 10px rgba(255, 234, 0, 0.4);
+  background-color: #eac161;
+}
+
+.best_txt{
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+
+
+
+

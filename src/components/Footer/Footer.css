@@ -1,0 +1,110 @@
+.footer{
+    height: 850px;
+    background-color: #333333;
+    margin-top: 15px;
+}
+.container_footer {
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.vertical_block{
+    width: 20%;
+    margin-top: 100px;
+    height: 200px;
+   color: aliceblue;
+   font-size: large;
+   font-weight: 500;
+   letter-spacing: 1px;
+}
+.obertka{
+    display: flex;
+}
+.left_block_element{
+    display: flex;
+    margin-top: 15px;
+    
+}
+.el{
+    margin-left: 7%;
+    font-size: 16px;
+}
+.el2{
+    margin-left: 12%;
+    font-size: 14px;
+}
+.about_list{
+    font-size: 14px;
+    margin-top: 20px;
+    color: #999999;
+}
+.subscribe_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #494949;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease; 
+    width: 300px;
+}
+.subscribe_button span{
+    display: flex;
+    padding: 15px;
+}
+.subscribe_button svg{
+    margin-left: 20px;
+}
+.subscribe_button:hover {
+	background: #ffb400;
+
+	box-shadow: inset 0 0 0 3px  #ffb490;
+}
+.about_list p{
+    cursor: pointer;
+}
+.about_list p:hover{
+    color: aliceblue;
+}
+.lins{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 450px;
+}
+.lin{
+    width: 45%;
+}
+.lin hr{
+    border: 0.5px solid #3e3d3d;
+}
+.vk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 0.5px solid #6f6f6f;
+    margin-top: -15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.vk svg{
+    fill: #999999;
+}
+.vk:hover{
+    background-color: rgb(6, 135, 222);
+    border: 0;
+}
+.left_block_element .el2 a{
+    color: #6f6f6f;
+}
+.left_block_element .el2 a:hover{
+    color: #fffdfd;
+}
+.left_block_element .el a{
+    color: #6f6f6f;
+}
+.left_block_element .el a:hover{
+    color: #fffdfd;
+}
