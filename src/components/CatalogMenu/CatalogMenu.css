@@ -1,0 +1,21 @@
+.menu_block{
+    width: 190px;
+    
+}
+.menu_block_element{
+    padding: 15px ;
+    cursor: pointer;
+}
+.catalog_content{
+    display: flex;
+    margin-bottom: 55px;
+}
+.product_block{
+    margin-left: 30px;
+}
+.catalog_content .productList .product2{
+    width: 33%;
+}
+.catalog_content .productList{
+    width: 70%;
+}

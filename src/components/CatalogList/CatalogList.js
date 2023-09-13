@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './CatalogList.css'
 import { render } from "@testing-library/react";
+import { Link } from 'react-router-dom';
 
 class CatalogList extends Component {
 
@@ -11,16 +12,18 @@ class CatalogList extends Component {
     renderItems = (arr) => {
         const items = arr.map((item) => {
             return (
-                
                 <div className="product">
+                <Link to={"/catalog"}>
+               
                     <div className="for_img">
                     <img className="img" src={item.img} alt="" />
                     </div>
                     
                     <div className="title">{item.title}</div>
                     <div className="count">{item.count}</div>
-                </div>
                 
+                </Link>
+                </div>
             )
         })
         return (
