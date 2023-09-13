@@ -19,3 +19,14 @@
 .catalog_content .productList{
     width: 70%;
 }
+.category_element{
+    display: flex;
+    width: 25%;
+    height: 100px;
+}
+.categoryList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

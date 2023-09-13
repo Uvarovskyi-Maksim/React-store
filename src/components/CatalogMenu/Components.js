@@ -2,6 +2,7 @@ import ButtonCount from "../helpComponent/ButtonCount";
 import RenderStar from "../helpComponent/Stars";
 import { Component } from "react";
 
+
 function Category({ name, onClick }) {
     return <div className="menu_block_element" onClick={onClick}>{name}</div>;
   }
