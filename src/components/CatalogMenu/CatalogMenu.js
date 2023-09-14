@@ -1,14 +1,17 @@
-import { Component } from 'react';
-import './CatalogMenu.css'
-import detal from '../../resources/3.png'
+import React, { Component } from 'react';
+import './CatalogMenu.css';
+import detal from '../../resources/3.png';
 import { Product } from './Components'; // Импорт компонента Product
 import { ProductCategory } from './ProductCategory';
+import Cart from '../Cart/Cart';
 
 class ProductsList extends Component {
     state = {
         selectedCategory: 'запчасти',
-        selectedFilter: ''
+        selectedFilter: '',
+        cart: [], // Состояние корзины
     };
+
     updateCategory = (category) => {
         this.setState({ selectedCategory: category });
     };
@@ -61,7 +64,7 @@ class ProductsList extends Component {
             compatibility: 'Совместимость: JCB',
             cost: 456,
             category: 'масла',
-
+      
         },
         {
             title: 'фильтр volvo',
@@ -81,10 +84,10 @@ class ProductsList extends Component {
             category: 'фильтры',
             filter: 'cat'
         }
-
-    ];
-
-    categories = [
+      
+      ];
+      
+      categories = [
         {
             image: detal,
             title: 'Запчасти cat',
@@ -114,89 +117,97 @@ class ProductsList extends Component {
             category: 'фильтры',
             filter: 'cat'
         }
+      
+      ]
 
-    ]
     renderItems = () => {
         const { selectedCategory, selectedFilter } = this.state;
-      
+
         const filteredProducts = this.products.filter((product) => {
-          return (
-            product.category === selectedCategory &&
-            (selectedFilter === '' || product.filter === selectedFilter)
-          );
+            return (
+                product.category === selectedCategory &&
+                (selectedFilter === '' || product.filter === selectedFilter)
+            );
         });
-      
+
         return (
-          filteredProducts.map((item, index) => (
-            <Product key={index} item={item} />
-          ))
+            filteredProducts.map((item, index) => (
+                <Product key={index} item={item} addToCart={this.addToCart} />
+            ))
         );
-      };
-      
+    };
+
     renderCategories = () => {
         const { selectedCategory } = this.state;
         const categoryProducts = this.categories.filter(
             (category) => category.category === selectedCategory
-        )
+        );
         return (
             categoryProducts.map((item, index) => (
                 <ProductCategory key={index} item={item} />
             ))
-        )
+        );
     };
-    
 
     click = (filterValue) => {
         this.setState({ selectedFilter: filterValue });
     };
+
+    // Метод для добавления товара в корзину
+    addToCart = (item) => {
+        const updatedCart = [...this.state.cart];
+        updatedCart.push(item);
+        this.setState({ cart: updatedCart });
+    };
+
+    // Метод для удаления товара из корзины
+    removeFromCart = (index) => {
+        const updatedCart = [...this.state.cart];
+        updatedCart.splice(index, 1);
+        this.setState({ cart: updatedCart });
+    };
+
     renderCategoryElements = () => {
         const { selectedCategory } = this.state;
-        
+
         return this.categories.map((category, index) => {
-          if (category.category !== selectedCategory) {
-            return null; // Скрываем фильтры, которые не соответствуют выбранной категории
-          }
-          
-          return (
-            <div className='category_element product2' key={index} onClick={() => this.click(category.filter)}>
-              <img src={category.image} alt="" /> {category.title}
-            </div>
-          );
+            if (category.category !== selectedCategory) {
+                return null; // Скрываем фильтры, которые не соответствуют выбранной категории
+            }
+
+            return (
+                <div className='category_element product2' key={index} onClick={() => this.click(category.filter)}>
+                    <img src={category.image} alt="" /> {category.title}
+                </div>
+            );
         });
-      };
-      render() {
+    };
+    
+    render() {
+        const { selectedFilter, cart } = this.state;
         return (
             <div className='container'>
                 <div className='categoryList'>
-                        {this.renderCategoryElements()}
-                    </div>
+                    {this.renderCategoryElements()}
+                </div>
                 <div className="catalog_content">
                     <div className='menu_block'>
-                        <div className='menu_block_element' onClick={() => this.handleMenuClick('запчасти')}>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'запчасти' })}>
                             Запчасти
                         </div>
-                        <div className='menu_block_element' onClick={() => this.handleMenuClick('фильтры')}>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'фильтры' })}>
                             Фильтры
                         </div>
-                        <div className='menu_block_element' onClick={() => this.handleMenuClick('масла')}>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'масла' })}>
                             Масла
                         </div>
                     </div>
-                    
                     <div className='productList'>{this.renderItems()}</div>
                 </div>
+                <Cart cart={cart} removeFromCart={this.removeFromCart} />
             </div>
         );
     }
-    
-    handleMenuClick = (category) => {
-        // Сбросить выбранный фильтр на пустую строку
-        this.setState({
-            selectedCategory: category,
-            selectedFilter: ''
-        });
-    }
-    
 }
 
 export default ProductsList;

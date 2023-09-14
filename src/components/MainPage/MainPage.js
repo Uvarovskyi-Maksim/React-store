@@ -15,7 +15,7 @@ import Slide2 from '../../resources/slide2.png'
 
 class MainPage extends Component {
   render() {
-    const images = [Slide1, Slide2]
+    const imagess = [Slide1, Slide2]
     const imageSize = {
       width: '50%', 
       height: '500px',
@@ -24,7 +24,7 @@ class MainPage extends Component {
     return (
       <div>
         <Header></Header>
-        <Slider images={images} imageSize={imageSize}></Slider>
+        <Slider images={imagess} imageSize={imageSize}></Slider>
         <CatalogList></CatalogList>
 
         <div className='container'>
