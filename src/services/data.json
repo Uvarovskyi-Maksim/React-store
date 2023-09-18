@@ -1,0 +1,229 @@
+{
+    "products": [
+        {
+            "title": "Запчасть volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 888,
+            "category": "запчасти",
+            "filter": "volvo"
+        },
+        {
+            "title": "Запчасть volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 888,
+            "category": "запчасти",
+            "filter": "volvo"
+        },
+        {
+            "title": "Запчасть volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 888,
+            "category": "запчасти",
+            "filter": "volvo"
+        },
+        {
+            "title": "Запчасть cat",
+            "img": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "запчасти",
+            "filter": "cat"
+        },
+        {
+            "title": "Масло cat",
+            "img": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "масла",
+            "filter": "cat"
+        },
+        {
+            "title": "Масло volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "масла",
+            "filter": "volvo"
+        },
+        {
+            "title": "фильтр volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "фильтры",
+            "filter": "volvo"
+        },
+        {
+            "title": "фильтр cat",
+            "img": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "фильтры",
+            "filter": "cat"
+        }
+    ],
+    "categories": [
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "title": "Запчасти cat",
+            "count": 400,
+            "category": "запчасти",
+            "filter": "cat"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "title": "Запчасти volvo",
+            "count": 400,
+            "category": "запчасти",
+            "filter": "volvo"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "title": "Фильтры volvo",
+            "count": 400,
+            "category": "фильтры",
+            "filter": "volvo"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "title": "Фильтры для cat",
+            "count": 400,
+            "category": "фильтры",
+            "filter": "cat"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "title": "Масла для cat",
+            "count": 400,
+            "category": "масла",
+            "filter": "cat"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "title": "Масла для volvo",
+            "count": 400,
+            "category": "масла",
+            "filter": "volvo"
+        }
+    ],
+    "categories_main": [
+        
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            },
+            {
+                "title": "Запчасти",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "585 товара"
+            }
+        ],
+        "best_products": [
+            {
+                "title": "Запчасть volvo",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 888,
+                "category": "запчасти",
+                "filter": "volvo"
+            },
+            {
+                "title": "Запчасть volvo",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 888,
+                "category": "запчасти",
+                "filter": "volvo"
+            },
+            {
+                "title": "Запчасть volvo",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 888,
+                "category": "запчасти",
+                "filter": "volvo"
+            },
+            {
+                "title": "Запчасть cat",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 456,
+                "category": "запчасти",
+                "filter": "cat"
+            },
+            {
+                "title": "Масло cat",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 456,
+                "category": "масла",
+                "filter": "cat"
+            },
+            {
+                "title": "фильтр volvo",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 456,
+                "category": "фильтры",
+                "filter": "volvo"
+            },
+            {
+                "title": "фильтр cat",
+                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
+                "count": "Много",
+                "compatibility": "Совместимость: JCB",
+                "cost": 456,
+                "category": "фильтры",
+                "filter": "cat"
+            }
+        ]
+    
+}

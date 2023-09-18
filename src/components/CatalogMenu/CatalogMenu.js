@@ -4,121 +4,31 @@ import detal from '../../resources/3.png';
 import { Product } from './Components'; // Импорт компонента Product
 import { ProductCategory } from './ProductCategory';
 import Cart from '../Cart/Cart';
+import data from "../../services/data.json";
+
+import Header from '../header/AppHeader';
 
 class ProductsList extends Component {
+    
     state = {
         selectedCategory: 'запчасти',
         selectedFilter: '',
-        cart: [], // Состояние корзины
+        cart: JSON.parse(localStorage.getItem('cart')) || [], // Состояние корзины
+        isBlockVisible: true,
     };
+    products = data.products;
+    categories = data.categories;
 
     updateCategory = (category) => {
-        this.setState({ selectedCategory: category });
+        // Сбрасываем выбранную подкатегорию при выборе категории
+        this.setState({ selectedCategory: category, selectedFilter: category });
     };
 
     updateSubcategory = (subcategory) => {
         this.setState({ selectedFilter: subcategory });
     };
 
-    products = [
-        {
-            title: 'Запчасть volvo',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 888,
-            category: 'запчасти',
-            filter: 'volvo'
-        },
-        {
-            title: 'Запчасть volvo',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 888,
-            category: 'запчасти',
-            filter: 'volvo'
-        },
-        {
-            title: 'Запчасть volvo',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 456,
-            category: 'запчасти',
-            filter: 'volvo'
-        },
-        {
-            title: 'Запчасть cat',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 456,
-            category: 'запчасти',
-            filter: 'cat'
-        },
-        {
-            title: 'Фильтр топливный 32/925915 PBS',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 456,
-            category: 'масла',
-      
-        },
-        {
-            title: 'фильтр volvo',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 456,
-            category: 'фильтры',
-            filter: 'volvo'
-        },
-        {
-            title: 'фильтр cat',
-            img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-            count: 'Много',
-            compatibility: 'Совместимость: JCB',
-            cost: 2555,
-            category: 'фильтры',
-            filter: 'cat'
-        }
-      
-      ];
-      
-      categories = [
-        {
-            image: detal,
-            title: 'Запчасти cat',
-            count: 400,
-            category: 'запчасти',
-            filter: 'cat'
-        },
-        {
-            image: detal,
-            title: 'Запчасти для volcvo',
-            count: 400,
-            category: 'запчасти',
-            filter: 'volvo'
-        }
-        ,
-        {
-            image: detal,
-            title: 'Фильтры для volcvo',
-            count: 400,
-            category: 'фильтры',
-            filter: 'volvo'
-        },
-        {
-            image: detal,
-            title: 'Фильтры для cat',
-            count: 400,
-            category: 'фильтры',
-            filter: 'cat'
-        }
-      
-      ]
+    
 
     renderItems = () => {
         const { selectedCategory, selectedFilter } = this.state;
@@ -153,18 +63,23 @@ class ProductsList extends Component {
         this.setState({ selectedFilter: filterValue });
     };
 
-    // Метод для добавления товара в корзину
+    
+
     addToCart = (item) => {
         const updatedCart = [...this.state.cart];
         updatedCart.push(item);
         this.setState({ cart: updatedCart });
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        console.log(localStorage)
     };
 
-    // Метод для удаления товара из корзины
+
     removeFromCart = (index) => {
         const updatedCart = [...this.state.cart];
         updatedCart.splice(index, 1);
         this.setState({ cart: updatedCart });
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    
     };
 
     renderCategoryElements = () => {
@@ -176,35 +91,57 @@ class ProductsList extends Component {
             }
 
             return (
-                <div className='category_element product2' key={index} onClick={() => this.click(category.filter)}>
-                    <img src={category.image} alt="" /> {category.title}
+                <div className='category_element product22' key={index} onClick={() => this.click(category.filter)}>
+                    <img className='categImg' src={category.image} alt="" /> <div className='categ'> {category.title}</div>
                 </div>
             );
         });
     };
+    toggleBlockVisibility = () => {
+        this.setState({ isBlockVisible: !this.state.isBlockVisible });
+        console.log('HELLO')
+    };
+    handleMouseEnter = () => {
+        this.setState({ isBlockVisible: true });
+        console.log('HEllllo')
+      };
     
+      handleMouseLeave = () => {
+        this.setState({ isBlockVisible: false });
+      };
+      // openBlock={this.handleMouseEnter} hideBlock={this.handleMouseLeave}
     render() {
-        const { selectedFilter, cart } = this.state;
+        const { selectedFilter, cart, toggleBlockVisibility } = this.state;
         return (
+            <div>
+            
+                  <Header cart={cart} toggleBlockVisibility={this.toggleBlockVisibility}/>
+                  {this.state.isBlockVisible && <Cart cart={cart} removeFromCart={this.removeFromCart} />}
             <div className='container'>
                 <div className='categoryList'>
+                    
                     {this.renderCategoryElements()}
                 </div>
                 <div className="catalog_content">
+                    
                     <div className='menu_block'>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'запчасти' })}>
+                    <h4>Каталог</h4>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'запчасти', selectedFilter: '' })}>
                             Запчасти
                         </div>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'фильтры' })}>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'фильтры', selectedFilter: '' })}>
                             Фильтры
                         </div>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'масла' })}>
+                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'масла', selectedFilter: '' })}>
                             Масла
                         </div>
                     </div>
                     <div className='productList'>{this.renderItems()}</div>
                 </div>
-                <Cart cart={cart} removeFromCart={this.removeFromCart} />
+                
+                
+
+            </div>
             </div>
         );
     }

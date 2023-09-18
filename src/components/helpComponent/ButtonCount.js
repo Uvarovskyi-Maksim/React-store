@@ -39,7 +39,7 @@ class ButtonCount extends Component {
           {this.state.minus}
         </button>
         <div className="count_calc">{this.state.counts}</div>
-        <button className="plus" onClick={this.increaseCount}>
+        <button className="plusi" onClick={this.increaseCount}>
           {this.state.plus}
         </button>
         <div className="costs">

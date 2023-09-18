@@ -5,7 +5,7 @@ import { render } from "@testing-library/react";
 import RenderStar from "../helpComponent/Stars";
 import ButtonCount from "../helpComponent/ButtonCount";
 import CostCalc from "../CostCalc/CostCalc";
-
+import data from '../../services/data.json'
 
 
 class TopList extends Component {
@@ -28,7 +28,7 @@ class TopList extends Component {
             }));
         }
     };
-    
+
     renderItems = (arr) => {
         const items = arr.map((item) => {
             return (
@@ -45,15 +45,16 @@ class TopList extends Component {
                     </div>
                     <div className="cost">{item.cost + ' руб/шт'}</div>
                     <div className="add_to_cart">
-                        
+
                         <ButtonCount
                             count={this.state.count}
-                            cost={item.cost}    
+                            cost={item.cost}
+                            updateCounts={(counts, totalCost) => this.setState({ counts, totalCost })} // Передаем функцию обновления данных в ButtonCount
                         />
-                       
+                        
                         <div className="add"><span>В корзину</span></div>
                     </div>
-                    
+
                 </div>
 
             )
@@ -66,55 +67,11 @@ class TopList extends Component {
     }
 
     render() {
-        const elements = [
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 888
-            },
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 888
-            },
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 456
-            },
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 541
-            },
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 854
-            },
-            {
-                title: 'Фильтр топливный 32/925915 PBS',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: 'Много',
-                compatibility: 'Совместимость: JCB',
-                cost: 452
-            }
-
-        ]
-        const items = this.renderItems(elements)
+       
+        
         return (
             <div className="sectionProductList">
-                {items}
+               {this.renderItems(data.best_products)}
             </div>
         )
     }

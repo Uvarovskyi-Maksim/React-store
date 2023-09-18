@@ -23,9 +23,11 @@
     display: flex;
     justify-content: space-between;
 }
-.plus{
+.plusi{
     margin-left: 25%;
     background-color: rgb(235, 238, 240);
+    border: 0;
+    cursor: pointer;
 }
 .minus{
     border: 0;

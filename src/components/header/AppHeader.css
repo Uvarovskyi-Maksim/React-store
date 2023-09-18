@@ -71,8 +71,14 @@ a{
   .mid_line{
     display: flex;
     height: 65px;
+    
   }
-
+ .sticky-mid-line {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Цвет фона, если требуется */
+    z-index: 100; /* Поднимите блок над остальным контентом, если это необходимо */
+  }
   .logo{
     display: flex;
     align-items: center;

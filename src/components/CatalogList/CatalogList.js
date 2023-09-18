@@ -2,6 +2,7 @@ import { Component } from "react";
 import './CatalogList.css'
 import { render } from "@testing-library/react";
 import { Link } from 'react-router-dom';
+import data from '../../services/data.json'
 
 class CatalogList extends Component {
 
@@ -32,64 +33,13 @@ class CatalogList extends Component {
             
         )
     }
-
+    
     render() {
-        const elements = [
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '585 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '686 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            },
-            {
-                title: 'Запчасти',
-                img: 'https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp',
-                count: '7878 товара'
-            }
-        ]
-        const items = this.renderItems(elements)
+       
+       
         return (
             <div className="sectionProductList">
-                {items}
+                {this.renderItems(data.categories_main)}
             </div>
         )
     }
