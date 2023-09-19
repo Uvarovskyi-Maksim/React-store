@@ -18,7 +18,7 @@ class MainPage extends Component {
 
   state = {
     cart: JSON.parse(localStorage.getItem('cart')) || [],
-    isBlockVisible: true
+    isBlockVisible: false
   }
 
 
@@ -42,7 +42,14 @@ class MainPage extends Component {
     this.setState({ isBlockVisible: !this.state.isBlockVisible });
     console.log('HELLO')
 };
+handleMouseEnter = () => {
+  this.setState({ isBlockVisible: true });
+  console.log('HEllllo')
+};
 
+handleMouseLeave = () => {
+  this.setState({ isBlockVisible: false });
+};
   render() {
     const imagess = [Slide1, Slide2]
     const imageSize = {
@@ -53,7 +60,7 @@ class MainPage extends Component {
 
     return (
       <div>
-        <Header cart={this.state.cart} toggleBlockVisibility={this.toggleBlockVisibility} />
+        <Header cart={this.state.cart} openBlock={this.handleMouseEnter} hideBlock={this.handleMouseLeave} />
         {this.state.isBlockVisible && <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} />}
         <Slider images={imagess} imageSize={imageSize}></Slider>
         <CatalogList></CatalogList>

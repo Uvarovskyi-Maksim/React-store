@@ -10,21 +10,14 @@ class Header extends Component {
         likeCount: 0,
         backetCpunt: 0,
         isCartOpen: false,
+        cart: JSON.parse(localStorage.getItem('cart')) || []
     }
-    toggleCart = () => {
-        this.setState({ isCartOpen: !this.state.isCartOpen }, () => {
-            console.log('Cart is now open:', this.state.isCartOpen);
-        });
-    };
+   
     
     
 
     render() {
         const { cart } = this.props;
-        const { isCartOpen } = this.state;
-        const { isBlockVisible } = this.state;
-
-        const cartIsEmpty = !cart || cart.length === 0;
         return (
             <div className="header">
                 <div className="header_line">
@@ -77,16 +70,16 @@ class Header extends Component {
                                 <i className="like" aria-hidden="true" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path data-name="Ellipse 270 copy 3" class="clsw-1" d="M682.741,81.962L682.75,82l-0.157.142a5.508,5.508,0,0,1-1.009.911L675,89h-2l-6.5-5.9a5.507,5.507,0,0,1-1.188-1.078l-0.057-.052,0-.013A5.484,5.484,0,1,1,674,75.35,5.485,5.485,0,1,1,682.741,81.962ZM678.5,75a3.487,3.487,0,0,0-3.446,3H675a1,1,0,0,1-2,0h-0.054a3.491,3.491,0,1,0-5.924,2.971L667,81l7,6,7-6-0.023-.028A3.5,3.5,0,0,0,678.5,75Z" transform="translate(-664 -73)"></path></svg></i>								<span class="title dark_link"></span>
                                 <span className="count_block"><span className="count">0</span></span>
                             </span>
-                            <span className="js-basket-block"  onClick={this.props.toggleBlockVisibility} onMouseEnter={this.props.openBlock} onMouseLeave={this.props.hideBlock}>
+                            <span className="js-basket-block"  onClick={this.props.toggleBlockVisibility} onMouseEnter={this.props.openBlock} >
                                 <i className="svg inline  svg-inline-basket big" aria-hidden="true"><svg class="" width="19" height="16" viewBox="0 0 19 16"><path data-name="Ellipse 2 copy 9" class="cls-1" d="M956.047,952.005l-0.939,1.009-11.394-.008-0.952-1-0.953-6h-2.857a0.862,0.862,0,0,1-.952-1,1.025,1.025,0,0,1,1.164-1h2.327c0.3,0,.6.006,0.6,0.006a1.208,1.208,0,0,1,1.336.918L943.817,947h12.23L957,948v1Zm-11.916-3,0.349,2h10.007l0.593-2Zm1.863,5a3,3,0,1,1-3,3A3,3,0,0,1,945.994,954.005ZM946,958a1,1,0,1,0-1-1A1,1,0,0,0,946,958Zm7.011-4a3,3,0,1,1-3,3A3,3,0,0,1,953.011,954.005ZM953,958a1,1,0,1,0-1-1A1,1,0,0,0,953,958Z" transform="translate(-938 -944)"></path></svg></i>																<span class="title dark_link"></span>
-                                <span className="count_block"><span className="count">0</span></span>
-                                {isCartOpen && !cartIsEmpty && <Cart cart={cart} removeFromCart={this.removeFromCart} />}
+                                <span className="count_block"><span className="count">{cart.length}</span></span>
                             </span>
                         </div>
                     </div>
                 </div>
 
             </div>
+            
 
         )
     }

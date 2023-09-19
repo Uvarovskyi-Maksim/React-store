@@ -5,30 +5,32 @@ import { Product } from './Components'; // Импорт компонента Pro
 import { ProductCategory } from './ProductCategory';
 import Cart from '../Cart/Cart';
 import data from "../../services/data.json";
-
 import Header from '../header/AppHeader';
 
 class ProductsList extends Component {
-    
+
     state = {
-        selectedCategory: 'запчасти',
+        selectedCategory: localStorage.getItem('selectedCategory'),
         selectedFilter: '',
         cart: JSON.parse(localStorage.getItem('cart')) || [], // Состояние корзины
-        isBlockVisible: true,
+        isBlockVisible: false,
+        isCart: true
+       
     };
     products = data.products;
     categories = data.categories;
-
+    categories_main = data.categories_main
     updateCategory = (category) => {
         // Сбрасываем выбранную подкатегорию при выборе категории
         this.setState({ selectedCategory: category, selectedFilter: category });
+        localStorage.setItem('selectedCategory', category);
     };
 
     updateSubcategory = (subcategory) => {
         this.setState({ selectedFilter: subcategory });
     };
 
-    
+
 
     renderItems = () => {
         const { selectedCategory, selectedFilter } = this.state;
@@ -63,7 +65,7 @@ class ProductsList extends Component {
         this.setState({ selectedFilter: filterValue });
     };
 
-    
+
 
     addToCart = (item) => {
         const updatedCart = [...this.state.cart];
@@ -79,7 +81,7 @@ class ProductsList extends Component {
         updatedCart.splice(index, 1);
         this.setState({ cart: updatedCart });
         localStorage.setItem('cart', JSON.stringify(updatedCart));
-    
+
     };
 
     renderCategoryElements = () => {
@@ -104,44 +106,61 @@ class ProductsList extends Component {
     handleMouseEnter = () => {
         this.setState({ isBlockVisible: true });
         console.log('HEllllo')
-      };
-    
-      handleMouseLeave = () => {
-        this.setState({ isBlockVisible: false });
-      };
-      // openBlock={this.handleMouseEnter} hideBlock={this.handleMouseLeave}
+    };
+
+    handleMouseLeave = () => {
+        setTimeout(() => this.setState({ isBlockVisible: false }), 2000);
+        ;
+    };
+    MouseEnter = () => {
+        this.setState({isBlockVisible: true});
+        console.log('cart')
+    };
+
+    MouseLeave = (e) => {
+        setTimeout(() => this.setState({ isBlockVisible: false }));
+    };
+    array = (
+        <div className="menu_block">
+            {this.categories_main.map((item, index) => {
+
+                return (
+                    <div
+                        className="menu_block_element"
+                        onClick={() =>
+                            this.setState({
+                                selectedCategory: `${item.category}`,
+                                selectedFilter: "",
+                            })
+                        }
+                    >
+                        {item.category}
+                    </div>
+                );
+            })}
+        </div>
+    )
     render() {
         const { selectedFilter, cart, toggleBlockVisibility } = this.state;
         return (
             <div>
-            
-                  <Header cart={cart} toggleBlockVisibility={this.toggleBlockVisibility}/>
-                  {this.state.isBlockVisible && <Cart cart={cart} removeFromCart={this.removeFromCart} />}
-            <div className='container'>
-                <div className='categoryList'>
-                    
-                    {this.renderCategoryElements()}
-                </div>
-                <div className="catalog_content">
-                    
-                    <div className='menu_block'>
-                    <h4>Каталог</h4>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'запчасти', selectedFilter: '' })}>
-                            Запчасти
-                        </div>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'фильтры', selectedFilter: '' })}>
-                            Фильтры
-                        </div>
-                        <div className='menu_block_element' onClick={() => this.setState({ selectedCategory: 'масла', selectedFilter: '' })}>
-                            Масла
-                        </div>
-                    </div>
-                    <div className='productList'>{this.renderItems()}</div>
-                </div>
-                
-                
 
-            </div>
+                <Header cart={cart} openBlock={this.handleMouseEnter} hideBlock={this.handleMouseLeave} />
+                {this.state.isBlockVisible && <Cart cart={cart} removeFromCart={this.removeFromCart} openBlock={this.MouseEnter} hideBlock={this.MouseLeave}  customH2Style={{ color: 'red' }} />}
+                <div className='container'>
+                    <div className='categoryList'>
+
+                        {this.renderCategoryElements()}
+                    </div>
+                    <div className="catalog_content">
+
+                        {this.array}
+                        <div className='productList'>{this.renderItems()}</div>
+                    </div>
+
+
+
+                </div>
             </div>
         );
     }

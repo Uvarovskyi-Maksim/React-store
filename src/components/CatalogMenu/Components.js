@@ -4,12 +4,9 @@ import { Component } from "react";
 
 
 function Category({ name, onClick }) {
-    return <div className="menu_block_element" onClick={onClick}>{name}</div>;
+    return <div className="menu_block_element" onClick={onClick}></div>;
   }
   
-  // Компонент для отображения товара
-
-
   class Product extends Component {
     state = {
       counts: 1,

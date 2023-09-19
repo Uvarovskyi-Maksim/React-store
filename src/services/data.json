@@ -71,6 +71,24 @@
             "cost": 456,
             "category": "фильтры",
             "filter": "cat"
+        },
+        {
+            "title": "Трактора cat",
+            "img": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "трактора",
+            "filter": "cat"
+        },
+        {
+            "title": "Трактора volvo",
+            "img": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "count": "Много",
+            "compatibility": "Совместимость: JCB",
+            "cost": 456,
+            "category": "трактора",
+            "filter": "volvo"
         }
     ],
     "categories": [
@@ -115,6 +133,20 @@
             "count": 400,
             "category": "масла",
             "filter": "volvo"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/344/wm650ikpy6hi6q6mon9d2qn2ty9856zl.png",
+            "title": "Трактора cat",
+            "count": 400,
+            "category": "трактора",
+            "filter": "cat"
+        },
+        {
+            "image": "https://partsboxshop.ru/upload/iblock/455/njhu9x479jxayzv1pvqsqhq06b112uf5.png",
+            "title": "Трактора volvo",
+            "count": 400,
+            "category": "трактора",
+            "filter": "volvo"
         }
     ],
     "categories_main": [
@@ -122,42 +154,26 @@
             {
                 "title": "Запчасти",
                 "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
+                "count": "585 товара",
+                "category":"запчасти"
             },
             {
-                "title": "Запчасти",
+                "title": "Масла",
                 "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
+                "count": "585 товара",
+                "category": "масла"
             },
             {
-                "title": "Запчасти",
+                "title": "Фильтры",
                 "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
+                "count": "585 товара",
+                "category": "фильтры"
             },
             {
-                "title": "Запчасти",
+                "title": "Трактора",
                 "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
-            },
-            {
-                "title": "Запчасти",
-                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
-            },
-            {
-                "title": "Запчасти",
-                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
-            },
-            {
-                "title": "Запчасти",
-                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
-            },
-            {
-                "title": "Запчасти",
-                "img": "https://partsboxshop.ru/upload/iblock/5b2/2mvvx4zom733lr5qhjgkoldazjmq57m6.webp",
-                "count": "585 товара"
+                "count": "585 товара",
+                "category": "трактора"
             }
         ],
         "best_products": [
